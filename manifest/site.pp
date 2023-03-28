@@ -4,5 +4,5 @@ file {'/opt/minecraft':
 
 file {'/etc/systemd/system/minecraft.service':
   ensure => file
-  
+  source => /vagrant/minecraft.service
 }
