@@ -1,5 +1,5 @@
 file {'/opt/minecraft':
-  ensure => file,
+  ensure => directory,
 }
 
 file {'/etc/systemd/system/minecraft.service':
