@@ -1,0 +1,17 @@
+server {
+                listen 80;
+                server_name site.tld blog.site.tld;
+
+                location / {
+                        proxy_pass http://192.168.50.11:80;
+                }
+        }
+
+server {
+                listen 8080;
+                server_name site.tld blog.site.tld;
+
+                location / {
+                        proxy_pass http://192.168.50.12:80;
+                }
+        }
