@@ -44,4 +44,12 @@ node 'master.puppet'{
     ensure => installed,
 }
 
+  file {'/etc/nginx/sites-available/default':
+    ensure => file,
+    source => '/vagrant/default'
+}
+
+  service {'nginx':
+    ensure => restarted,
+} 
 }
